@@ -8,7 +8,7 @@
 |  4  	| Jun 27 	| LC: 961 (1)  	|
 |  5  	| Jun 28 	| LC: 890 (2)  	|
 |  6  	| Jun 29 	| fbArchiveAnalysis.py  	|
-|  7  	| Jun 30 	|   	|
+|  7  	| Jun 30 	| fbArchiveAnalysis.py (More improvements)  	|
 |  8  	| Jul 01 	|   	|
 |  9  	| Jul 02 	|   	|
 |  10 	| Jul 03 	|   	|
