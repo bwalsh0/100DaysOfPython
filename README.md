@@ -10,7 +10,7 @@
 |  6  	| Jun 29 	| fbArchiveAnalysis.py  	|
 |  7  	| Jun 30 	| fbArchiveAnalysis.py (More improvements)  	|
 |  8  	| Jul 01 	| rpi_dht.py  	|
-|  9  	| Jul 02 	|   	|
+|  9  	| Jul 02 	| dot_com_dictionary.py  	|
 |  10 	| Jul 03 	|   	|
 |  11 	| Jul 04 	|   	|
 |  12 	| Jul 05 	|   	|
