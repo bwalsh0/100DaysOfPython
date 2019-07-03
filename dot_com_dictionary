@@ -14,4 +14,4 @@ for line in en_dictionary:
 
 en_dictionary.close()
 
-# WIP: Parse every *.com domain name in the english dictionary to check which ones are still unclaimed
+# WIP: Ping every *.com domain name in the english dictionary to check which ones are still unclaimed
