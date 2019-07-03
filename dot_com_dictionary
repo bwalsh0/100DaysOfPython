@@ -1,0 +1,17 @@
+import socket
+from os import system
+
+socket.setdefaulttimeout(5)
+
+i = 0
+en_dictionary = open('words_alpha.txt')
+for line in en_dictionary:
+    i += 1
+    if i == 10:
+        break
+    word = line.splitlines()
+    print(word)
+
+en_dictionary.close()
+
+# WIP: Parse every *.com domain name in the english dictionary to check which ones are still unclaimed
