@@ -13,7 +13,7 @@
 |  9  	| Jul 02 	| dot_com_dictionary.py  	|
 |  10 	| Jul 03 	| dot_com_dictionary.py (More improvements)  	|
 |  11 	| Jul 04 	| dot_com_dictionary.py ("")  	|
-|  12 	| Jul 05 	|   	|
+|  12 	| Jul 05 	| LC: 338 (2)  	|
 |  13 	| Jul 06 	|   	|
 |  14 	| Jul 07 	|   	|
 |  15 	| Jul 08 	|   	|
