@@ -14,7 +14,7 @@
 |  10 	| Jul 03 	| dot_com_dictionary.py (More improvements)  	|
 |  11 	| Jul 04 	| dot_com_dictionary.py ("")  	|
 |  12 	| Jul 05 	| LC: 338 (2)  	|
-|  13 	| Jul 06 	|   	|
+|  13 	| Jul 06 	| socal_earthquake_feed.py  	|
 |  14 	| Jul 07 	|   	|
 |  15 	| Jul 08 	|   	|
 |  16 	| Jul 09 	|   	|
