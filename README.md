@@ -8,14 +8,14 @@
 |  4  	| Jun 27 	| LC: 961 (1)  	|
 |  5  	| Jun 28 	| LC: 890 (2)  	|
 |  6  	| Jun 29 	| fbArchiveAnalysis.py  	|
-|  7  	| Jun 30 	| fbArchiveAnalysis.py (More improvements)  	|
+|  7  	| Jun 30 	| fbArchiveAnalysis.py (Improvements)  	|
 |  8  	| Jul 01 	| rpi_dht.py  	|
 |  9  	| Jul 02 	| dot_com_dictionary.py  	|
-|  10 	| Jul 03 	| dot_com_dictionary.py (More improvements)  	|
+|  10 	| Jul 03 	| dot_com_dictionary.py (Improvements)  	|
 |  11 	| Jul 04 	| dot_com_dictionary.py ("")  	|
 |  12 	| Jul 05 	| LC: 338 (2)  	|
 |  13 	| Jul 06 	| socal_earthquake_feed.py  	|
-|  14 	| Jul 07 	|   	|
+|  14 	| Jul 07 	| socal_earthquake_feed.py (Improvements)  	|
 |  15 	| Jul 08 	|   	|
 |  16 	| Jul 09 	|   	|
 |  17 	| Jul 10 	|   	|
