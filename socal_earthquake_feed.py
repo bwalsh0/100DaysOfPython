@@ -1,10 +1,17 @@
 import json, urllib.request
 import time
 from time import sleep
- 
+import tkinter
+
 # Sample output:
 # New earthquakes in last interval: 07/07/19 19:24
 # >> 2.54  --  17km ESE of Little Lake, CA  --  3 minutes ago
+
+window = tkinter.Tk()
+window.title("SoCal Earthquake Feed")
+
+def beginMonitor():
+    main()
 
 def parseEvents(features, timeNow, lastId) -> int:
     latBounds = [32.30, 35.95]
@@ -25,6 +32,7 @@ def parseEvents(features, timeNow, lastId) -> int:
         if i == 0:
             timeFmt = time.strftime('%D %H:%M')
             print("New earthquakes in last interval:", timeFmt)
+            tkinter.Label(window, text = "Monitor is running...\n\n").pack()
 
         # Filter only locally-relevant results
         coords = event["geometry"]["coordinates"]
@@ -34,26 +42,30 @@ def parseEvents(features, timeNow, lastId) -> int:
             location = event["properties"]["place"]
 
             # New update in past hour, print and continue until lastId == currId
-            print(">>", magnitude, " -- ", location, " -- ", timeSince, "minutes ago")
+            output = ">> " + str(magnitude) + "  --  " + location + "  --  " + str(timeSince) + " minutes ago\n"
+            print(output)
+            tkinter.Label(window, text = output).pack()
     
     return features[0]["properties"]["code"]
 
 def main():
-    pollFreq = 55 # time in sec. between json requests
+    pollFreq = 55 * 1000 # time in ms between json requests
     url = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_hour.geojson'
     lastId = 0
 
-    while True:
-        with urllib.request.urlopen(url) as geojson:
-            jsonResponse = json.load(geojson)
-            metadata = jsonResponse["metadata"]
-            features = jsonResponse["features"]
+    with urllib.request.urlopen(url) as geojson:
+        jsonResponse = json.load(geojson)
+        metadata = jsonResponse["metadata"]
+        features = jsonResponse["features"]
 
-            print("-- Retrieved GeoJSON --")
+        print("-- Retrieved GeoJSON --")
 
-            lastId = parseEvents(features, metadata["generated"], lastId)
+        lastId = parseEvents(features, metadata["generated"], lastId)
 
-        sleep(pollFreq)
+    window.after(pollFreq, main)
 
-if __name__ == '__main__':
-    main()
+b_begin = tkinter.Button(window, text = "Begin monitoring", command = beginMonitor).pack()
+window.mainloop()
+
+# if __name__ == '__main__':
+#     main()
