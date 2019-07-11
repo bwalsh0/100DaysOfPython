@@ -18,7 +18,7 @@
 |  14 	| Jul 07 	| socal_earthquake_feed.py (Improvements)  	|
 |  15 	| Jul 08 	| rpi_dht.py ("")  	|
 |  16 	| Jul 09 	| socal_earthquake_feed.py ("")  	|
-|  17 	| Jul 10 	|   	|
+|  17 	| Jul 10 	| LC: 1108 (1)  	|
 |  18 	| Jul 11 	|   	|
 |  19 	| Jul 12 	|   	|
 |  20 	| Jul 13 	|   	|
