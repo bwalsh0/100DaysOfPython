@@ -20,7 +20,7 @@
 |  16 	| Jul 09 	| socal_earthquake_feed.py ("")  	|
 |  17 	| Jul 10 	| LC: 1108 (1)  	|
 |  18 	| Jul 11 	| mp3_tag_parse.py  	|
-|  19 	| Jul 12 	|   	|
+|  19 	| Jul 12 	| csv_timekeeper.py  	|
 |  20 	| Jul 13 	|   	|
 |  21 	| Jul 14 	|   	|
 |  22 	| Jul 15 	|   	|
