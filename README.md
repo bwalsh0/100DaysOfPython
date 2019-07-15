@@ -22,7 +22,7 @@
 |  18 	| Jul 11 	| mp3_tag_parse.py  	|
 |  19 	| Jul 12 	| csv_timekeeper.py  	|
 |  20 	| Jul 13 	| LC: 344 (1)  	|
-|  21 	| Jul 14 	|   	|
+|  21 	| Jul 14 	| LC: 412 (1)  	|
 |  22 	| Jul 15 	|   	|
 |  23 	| Jul 16 	|   	|
 |  24 	| Jul 17 	|   	|
