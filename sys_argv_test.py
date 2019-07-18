@@ -27,7 +27,7 @@ def main():
                 print("Splitting .mo by folder:", args.dir)
                 # Toggle a flag
  
-def _initArguments():
+def _initArguments() -> argparse.Namespace:
         parser = argparse.ArgumentParser(description='Script description: Replaces strings in a large file based on .csv columns.')
 
         parser.add_argument('-d', '--dir', type=str, help='Run script for all .mo files in folder')
