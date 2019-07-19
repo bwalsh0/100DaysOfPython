@@ -26,7 +26,7 @@
 |  22 	| Jul 15 	| LC: 1021 (1)  	|
 |  23 	| Jul 16 	| LC: 13 (1)  	|
 |  24 	| Jul 17 	| sys_argv_test.py  	|
-|  25 	| Jul 18 	|   	|
+|  25 	| Jul 18 	| sys_argv_test.py ("")  	|
 |  26 	| Jul 19 	|   	|
 |  27 	| Jul 20 	|   	|
 |  28 	| Jul 21 	|   	|
