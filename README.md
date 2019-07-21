@@ -29,7 +29,7 @@
 |  25 	| Jul 18 	| sys_argv_test.py ("")  	|
 |  26 	| Jul 19 	| statement_visualizer.py  	|
 |  *--* 	| *Jul 20* 	| *(missed)*  	|
-| 27	| Jul 21 	|   	|
+| 27	| Jul 21 	| csv_data_sanitize.py  	|
 | 28	| Jul 22 	|   	|
 | 29	| Jul 23 	|   	|
 | 30	| Jul 24 	|   	|
