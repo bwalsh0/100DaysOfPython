@@ -26,11 +26,11 @@
 |  22 	| Jul 15 	| LC: 1021 (1)  	|
 |  23 	| Jul 16 	| LC: 13 (1)  	|
 |  24 	| Jul 17 	| sys_argv_test.py  	|
-|  25 	| Jul 18 	| sys_argv_test.py ("")  	|
+|  25 	| Jul 18 	| sys_argv_test.py (Improvements)  	|
 |  26 	| Jul 19 	| statement_visualizer.py  	|
 |  *--* 	| *Jul 20* 	| *(missed)*  	|
 | 27	| Jul 21 	| csv_data_sanitize.py  	|
-| 28	| Jul 22 	|   	|
+| 28	| Jul 22 	| statement_visualizer.py (Improvements)  	|
 | 29	| Jul 23 	|   	|
 | 30	| Jul 24 	|   	|
 | 31	| Jul 25 	|   	|
