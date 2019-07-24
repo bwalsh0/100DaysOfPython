@@ -31,7 +31,7 @@
 |  *--* 	| *Jul 20* 	| *(missed)*  	|
 | 27	| Jul 21 	| csv_data_sanitize.py  	|
 | 28	| Jul 22 	| statement_visualizer.py (Improvements)  	|
-| 29	| Jul 23 	|   	|
+| 29	| Jul 23 	| LC: 728 (1)  	|
 | 30	| Jul 24 	|   	|
 | 31	| Jul 25 	|   	|
 | 32	| Jul 26 	|   	|
