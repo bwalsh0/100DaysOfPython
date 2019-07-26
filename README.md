@@ -8,16 +8,16 @@
 |  4  	| Jun 27 	| LC: 961 (1)  	|
 |  5  	| Jun 28 	| LC: 890 (2)  	|
 |  6  	| Jun 29 	| fbArchiveAnalysis.py  	|
-|  7  	| Jun 30 	| fbArchiveAnalysis.py (Improvements)  	|
+|  7  	| Jun 30 	| fbArchiveAnalysis.py (+)  	|
 |  8  	| Jul 01 	| rpi_dht.py  	|
 |  9  	| Jul 02 	| dot_com_dictionary.py  	|
-|  10 	| Jul 03 	| dot_com_dictionary.py (Improvements)  	|
-|  11 	| Jul 04 	| dot_com_dictionary.py ("")  	|
+|  10 	| Jul 03 	| dot_com_dictionary.py (+)  	|
+|  11 	| Jul 04 	| dot_com_dictionary.py (+)  	|
 |  12 	| Jul 05 	| LC: 338 (2)  	|
 |  13 	| Jul 06 	| socal_earthquake_feed.py  	|
-|  14 	| Jul 07 	| socal_earthquake_feed.py (Improvements)  	|
-|  15 	| Jul 08 	| rpi_dht.py ("")  	|
-|  16 	| Jul 09 	| socal_earthquake_feed.py ("")  	|
+|  14 	| Jul 07 	| socal_earthquake_feed.py (+)  	|
+|  15 	| Jul 08 	| rpi_dht.py (+)  	|
+|  16 	| Jul 09 	| socal_earthquake_feed.py (+)  	|
 |  17 	| Jul 10 	| LC: 1108 (1)  	|
 |  18 	| Jul 11 	| mp3_tag_parse.py  	|
 |  19 	| Jul 12 	| csv_timekeeper.py  	|
@@ -26,14 +26,14 @@
 |  22 	| Jul 15 	| LC: 1021 (1)  	|
 |  23 	| Jul 16 	| LC: 13 (1)  	|
 |  24 	| Jul 17 	| sys_argv_test.py  	|
-|  25 	| Jul 18 	| sys_argv_test.py (Improvements)  	|
+|  25 	| Jul 18 	| sys_argv_test.py (+)  	|
 |  26 	| Jul 19 	| statement_visualizer.py  	|
 |  *--* 	| *Jul 20* 	| *(missed)*  	|
 | 27	| Jul 21 	| csv_data_sanitize.py  	|
-| 28	| Jul 22 	| statement_visualizer.py (Improvements)  	|
+| 28	| Jul 22 	| statement_visualizer.py (+)  	|
 | 29	| Jul 23 	| LC: 728 (1)  	|
 | 30	| Jul 24 	| parse_multi_dict.py  	|
-| 31	| Jul 25 	|   	|
+| 31	| Jul 25 	| parse_multi_dict.py (+)  	|
 | 32	| Jul 26 	|   	|
 | 33	| Jul 27 	|   	|
 | 34	| Jul 28 	|   	|
