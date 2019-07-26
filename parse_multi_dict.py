@@ -1,20 +1,28 @@
-outerDict = {}
-elemId = {}
+outer = []
 
 # For a specific-case project
+# Both cases have identical results with different data structures and runtimes
 
 with open(r'dict_demo.txt', 'r') as txtFile:
+    # 5000 lines, 48 ms
     for line in txtFile.readlines():
-        uid = line.partition("=")[2][:3]
-        elemId = {uid: {}}
-        elemId[uid].update(dict(s.split('=',1) for s in line[10:].strip().split(',',1)))
-        outerDict.update(elemId)
+        line = line.replace(' ', ',', 1).replace(' ', '=', 1).strip()
+        outer.append(dict(s.split('=') for s in line.split(',')))
+    outer.sort(key=lambda l: int(list(l.values())[3]), reverse=True)
 
-        # future:
-        #
-        # each file line into dict
-        # sort by volume counter
-        # discard counters below threshold
-        # turn remaining into a tree {a{1,...8}} using partition()
+    # 5000 lines, 36 ms
+    # for line in txtFile.readlines():
+    #     line = line.replace(' ', ',', 1).replace(' ', '=', 1).strip()
+    #     outer.append([s.partition('=')[2] for s in line.split(',', 2)])
+    #
+    # for i in outer:
+    #     part = i[2].partition(',')
+    #     part2 = part[2].partition('=')
+    #     i[2] = part[0]
+    #     i.append((part2[0], int(part2[2])))
+    #
+    # outer.sort(key=lambda l: l[3][1], reverse=True)
 
-print(outerDict)
+print(outer)
+# for i in outer:
+#     print(i)
