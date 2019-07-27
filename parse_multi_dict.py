@@ -1,28 +1,40 @@
-outer = []
-
 # For a specific-case project
 # Both cases have identical results with different data structures and runtimes
 
-with open(r'dict_demo.txt', 'r') as txtFile:
-    # 5000 lines, 48 ms
-    for line in txtFile.readlines():
-        line = line.replace(' ', ',', 1).replace(' ', '=', 1).strip()
-        outer.append(dict(s.split('=') for s in line.split(',')))
-    outer.sort(key=lambda l: int(list(l.values())[3]), reverse=True)
+unsortedList = []
+sortedList = []
+ITEM_TYPES = ['itemA', 'itemB', 'itemC', 'itemD', 'itemE', 'itemF', 'itemG', 'itemH']
 
-    # 5000 lines, 36 ms
-    # for line in txtFile.readlines():
-    #     line = line.replace(' ', ',', 1).replace(' ', '=', 1).strip()
-    #     outer.append([s.partition('=')[2] for s in line.split(',', 2)])
-    #
-    # for i in outer:
-    #     part = i[2].partition(',')
-    #     part2 = part[2].partition('=')
-    #     i[2] = part[0]
-    #     i.append((part2[0], int(part2[2])))
-    #
-    # outer.sort(key=lambda l: l[3][1], reverse=True)
 
-print(outer)
-# for i in outer:
-#     print(i)
+def sortList(sortedList):
+    # Sort all lists in outerList by the 2nd value in the tuple element
+    sortedList.sort(key=lambda l: l[-1][1], reverse=True)
+    print(sortedList)
+
+
+def parseFile():
+    # 5000 items, 46ms
+    with open(r'dict_demo.txt', 'r') as data:
+        for line in data.readlines():
+            lineSplit = line.partition('.txt:')
+            fileId = lineSplit[0]
+            line = lineSplit[2]
+
+            line = line.replace(' ', ',', 1).replace(' ', '=', 1).strip()
+            listItem = [s.split('=')[1] for s in line.split(',')]
+            listItem.insert(0, fileId)
+            unsortedList.append(listItem)
+    data.close()
+
+    for index, innerList in enumerate(unsortedList):
+        # Add item indentifier to value as tuple (itemN, 8)
+        innerList[-1] = (ITEM_TYPES[index % 8], innerList[-1])
+
+    sortList(unsortedList)
+
+
+def main():
+    parseFile()
+
+
+main()
