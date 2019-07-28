@@ -1,9 +1,7 @@
 # For a specific-case project
-# Both cases have identical results with different data structures and runtimes
 
-unsortedList = []
-sortedList = []
-ITEM_TYPES = ['itemA', 'itemB', 'itemC', 'itemD', 'itemE', 'itemF', 'itemG', 'itemH']
+CONST_ITEM_TYPES = ['itemA', 'itemB', 'itemC', 'itemD', 'itemE', 'itemF', 'itemG', 'itemH']
+unsortedList, sortedList = [], []
 
 
 def sortList(sortedList):
@@ -28,7 +26,7 @@ def parseFile():
 
     for index, innerList in enumerate(unsortedList):
         # Add item indentifier to value as tuple (itemN, 8)
-        innerList[-1] = (ITEM_TYPES[index % 8], innerList[-1])
+        innerList[-1] = (CONST_ITEM_TYPES[index % 8], innerList[-1])
 
     sortList(unsortedList)
 
