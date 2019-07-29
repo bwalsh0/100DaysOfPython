@@ -4,10 +4,16 @@ CONST_ITEM_TYPES = ['itemA', 'itemB', 'itemC', 'itemD', 'itemE', 'itemF', 'itemG
 unsortedList, sortedList = [], []
 
 
+def calculateTop(sortedList):
+    # Discard empty values and keep top 10 values
+    print(sortedList)
+
+
 def sortList(sortedList):
     # Sort all lists in outerList by the 2nd value in the tuple element
     sortedList.sort(key=lambda l: l[-1][1], reverse=True)
     print(sortedList)
+    calculateTop(sortedList)
 
 
 def parseFile():
@@ -33,6 +39,8 @@ def parseFile():
 
 def main():
     parseFile()
+
+    exit(1)
 
 
 main()
