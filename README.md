@@ -37,7 +37,7 @@
 | 32	| Jul 26 	| parse_multi_dict.py (+)  	|
 | 33	| Jul 27 	| parse_multi_dict.py (+)  	|
 | 34	| Jul 28 	| parse_multi_dict.py (+)  	|
-| 35	| Jul 29 	|   	|
+| 35	| Jul 29 	| (Proprietary code, ~3 hours)  	|
 | 36	| Jul 30 	|   	|
 | 37	| Jul 31 	|   	|
 | 38	| Aug 01 	|   	|
