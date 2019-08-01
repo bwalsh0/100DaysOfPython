@@ -39,7 +39,7 @@
 | 34	| Jul 28 	| parse_multi_dict.py (+)  	|
 | 35	| Jul 29 	| (Proprietary code: ~3 hours)  	|
 | 36	| Jul 30 	| (Proprietary code: SQL via Python, lambda functions)  	|
-| 37	| Jul 31 	|   	|
+| 37	| Jul 31 	| (Proprietary code: Profiling & Optimization, ~3 hours) 	|
 | 38	| Aug 01 	|   	|
 | 39	| Aug 02 	|   	|
 | 40	| Aug 03 	|   	|
