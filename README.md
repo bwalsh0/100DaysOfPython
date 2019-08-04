@@ -41,8 +41,8 @@
 | 36	| Jul 30 	| (Proprietary code: SQL via Python, lambda functions)  	|
 | 37	| Jul 31 	| (Proprietary code: Profiling & Optimization, ~3 hours) 	|
 | 38	| Aug 01 	| (Skip to deter burnout) 	|
-| 39	| Aug 02 	| statement_visualizer.py (+)  	|
-| 40	| Aug 03 	|   	|
+| 39	| Aug 02 	|   	|
+| 40	| Aug 03 	| statement_visualizer.py (+)  	|
 | 41	| Aug 04 	|   	|
 | 42	| Aug 05 	|   	|
 | 43	| Aug 06 	|   	|
