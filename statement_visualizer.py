@@ -3,11 +3,14 @@ import matplotlib.pyplot as plt
 
 i = 0
 date, expenses = [], []
-labels, labelExpense = [], []
+labelExpense = [{"Label": "", "Amount": 0}]
+
+input_path = r'\statement.CSV'
+output_path = r'\statement.CSV'
 
 
 def main():
-    with open(r'statement.CSV') as csvfile:
+    with open(input_path) as csvfile:
         reader = csv.DictReader(csvfile)
 
         for row in reader:
@@ -20,8 +23,8 @@ def main():
 
             if amt is not None and amt < 0:
                 amt *= -1.00
-                label = row.get('Label')
-                day = row.get('Posting Date')
+                label = row.get('Description')[:5]
+                # day = row.get('Posting Date')
 
                 # Expenses over time (per day)
                 # if len(date) > 0 and day == date[-1]:
@@ -30,19 +33,27 @@ def main():
                 #     expenses.append(amt)
                 #     date.append(day)
 
-                if len(labels) > 0 and label == labels[-1]:
-                    labelExpense[-1] += amt
+                if len(labelExpense) > 0 and label == labelExpense[-1]["Label"]:
+                    labelExpense[-1]["Amount"] += amt
                 else:
-                    labelExpense.append(amt)
-                    labels.append(label)
+                    labelExpense.append({"Label": label, "Amount": amt})
 
-    with open('statement_OUTPUT.CSV', 'w+') as csvout:
-        writer = csv.writer(csvout)
-        writer.writerows(zip(labels, labelExpense))
+    labelExpense.sort(key=lambda l:l["Label"])
 
-    plt.plot(labels, labelExpense)
+    # with open(output_path, 'w+') as csvout:
+    #     writer = csv.writer(csvout)
+    #     writer.writerows(labelExpense)
+
+    labelList = []
+    expenseList = []
+
+    for i in labelExpense:
+        labelList.append(i["Label"])
+        expenseList.append(i["Amount"])
+
+    plt.plot(labelList, expenseList)
     plt.ylabel('Expense')
-    plt.xlabel('Date')
+    plt.xlabel('Label')
     plt.show()
 
     exit()
