@@ -44,7 +44,7 @@
 | 39	| Aug 02 	|   	|
 | 40	| Aug 03 	| statement_visualizer.py (+)  	|
 | 41	| Aug 04 	| reddit_batch_request.py 	|
-| 42	| Aug 05 	|   	|
+| 42	| Aug 05 	| ucr_post_rnn.py  	|
 | 43	| Aug 06 	|   	|
 | 44	| Aug 07 	|   	|
 | 45	| Aug 08 	|   	|
