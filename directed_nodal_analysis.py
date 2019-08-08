@@ -2,7 +2,10 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import networkx as nx
 
-G = nx.generators.directed.random_k_out_graph(10, 20, 0.1)
+G = nx.MultiDiGraph()
+elist = [('a', 'b', 5.0), ('b', 'c', 3.0), ('a', 'c', 7.0), ('c', 'd', 15.0), \
+        ('a', 'd', 5.0), ('b', 'd', 3.0), ('a', 'b', 7.0), ('c', 'a', 15.0)]
+G.add_weighted_edges_from(elist)
 pos = nx.layout.spring_layout(G)
 
 node_sizes = [10 + 10 * i for i in range(len(G))]
