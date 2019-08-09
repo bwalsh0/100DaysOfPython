@@ -47,7 +47,7 @@
 | 42	| Aug 05 	| ucr_post_rnn.py  	|
 | 43	| Aug 06 	| directed_nodal_analysis.py  	|
 | 44	| Aug 07 	| directed_nodal_analysis.py (+)  	|
-| 45	| Aug 08 	|   	|
+| 45	| Aug 08 	| (Proprietary code: ~2 hours)  	|
 | 46	| Aug 09 	|   	|
 | 47	| Aug 10 	|   	|
 | 48	| Aug 11 	|   	|
