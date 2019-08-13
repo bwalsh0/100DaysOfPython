@@ -41,7 +41,7 @@
 | 36	| Jul 30 	| (Proprietary code: SQL via Python, lambda functions)  	|
 | 37	| Jul 31 	| (Proprietary code: Profiling & Optimization, ~3 hours) 	|
 | 38	| Aug 01 	| (Skip to deter burnout) 	|
-| 39	| Aug 02 	|   	|
+| *39*	| *Aug 02* 	|   	|
 | 40	| Aug 03 	| statement_visualizer.py (+)  	|
 | 41	| Aug 04 	| reddit_batch_request.py 	|
 | 42	| Aug 05 	| ucr_post_rnn.py  	|
@@ -50,8 +50,8 @@
 | 45	| Aug 08 	| (Proprietary code: ~2 hours)  	|
 | 46	| Aug 09 	| directed_nodal_analysis.py (+)  	|
 | 47	| Aug 10 	| rpi_dht.py (+)  	|
-| 48	| Aug 11 	|   	|
-| 49	| Aug 12 	|   	|
+| *48*	| *Aug 11* 	|   	|
+| 49	| Aug 12 	| rpi_dht.py (+)  	|
 | 50	| Aug 13 	|   	|
 | 51	| Aug 14 	|   	|
 | 52	| Aug 15 	|   	|
