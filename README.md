@@ -49,7 +49,7 @@
 | 44	| Aug 07 	| directed_nodal_analysis.py (+)  	|
 | 45	| Aug 08 	| (Proprietary code: ~2 hours)  	|
 | 46	| Aug 09 	| directed_nodal_analysis.py (+)  	|
-| 47	| Aug 10 	|   	|
+| 47	| Aug 10 	| rpi_dht.py (+)  	|
 | 48	| Aug 11 	|   	|
 | 49	| Aug 12 	|   	|
 | 50	| Aug 13 	|   	|
