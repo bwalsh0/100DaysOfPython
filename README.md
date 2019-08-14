@@ -52,7 +52,7 @@
 | 47	| Aug 10 	| rpi_dht.py (+)  	|
 | *48*	| *Aug 11* 	|   	|
 | 49	| Aug 12 	| rpi_dht.py (+)  	|
-| 50	| Aug 13 	|   	|
+| 50	| Aug 13 	| rpi_dht.py (+)  	|
 | 51	| Aug 14 	|   	|
 | 52	| Aug 15 	|   	|
 | 53	| Aug 16 	|   	|
