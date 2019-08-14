@@ -3,11 +3,12 @@ import Adafruit_DHT
 import RPi.GPIO as GPIO
 from RPLCD import CharLCD
 from datetime import datetime
+import pytz
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
-POLL_RATE = 5 * 60     # ROP in minutes
+POLL_RATE = 30 * 60     # ROP in minutes
 
 lcd_rs = 26
 lcd_en = 19
@@ -31,12 +32,12 @@ def main():
     while True:
         poll_sensor()
         idle_sensor()   # Hold for 30 min, listen for button down
-        print("Looped")
+        # print("Looped")
     # average_rop()
 
 
 def poll_sensor():
-    timeNow = datetime.now().strftime("%m/%d/%Y %H:%M")
+    timeNow = datetime.now(pytz.timezone('US/Pacific')).strftime("%m/%d/%Y %H:%M")
     # lcd.write_string('Polling ROP...')
     humidity, temp = Adafruit_DHT.read_retry(sensor, sPin)
     temp = temp * 9/5.0 + 32
