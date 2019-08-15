@@ -25,7 +25,6 @@ def main():
     while True:
         poll_sensor()
         idle_sensor()   # Hold for 30 min, listen for button down
-    # average_rop()
 
 
 def poll_sensor():
@@ -48,16 +47,24 @@ def idle_sensor():
 
 
 def read_sensor() -> (float, float):
-    humidity, temp = Adafruit_DHT.read_retry(SENSOR, S_PIN)
-    temp = temp * 9/5.0 + 32
-    time.sleep(0.5)
+    NUM_SAMPLES = 3.0
+    tSample, hSample = [], []
 
-    if humidity is None and temp is None:
-        temp, humidity = -1, -1
-        lcd.write_string('Failed to read sensor')
-        time.sleep(2)
-        lcd.clear()
-        return temp, humidity
+    # Get avg. from multiple reads
+    for sample in range(NUM_SAMPLES):
+        humidity, temp = Adafruit_DHT.read_retry(SENSOR, S_PIN)
+        temp = temp * 9/5.0 + 32
+        time.sleep(0.5)
+        if humidity is None and temp is None:
+            temp, humidity = -1, -1
+            lcd.write_string('Failed to read sensor')
+            time.sleep(2)
+            lcd.clear()
+            return temp, humidity
+        tSample.append(temp)
+        hSample.append(humidity)
+
+    temp, humidity = sum(tSample) / NUM_SAMPLES, sum(hSample) / NUM_SAMPLES
     temp = round(temp, 2)
     humidity = round(humidity, 2)
 
