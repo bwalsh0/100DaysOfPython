@@ -54,7 +54,7 @@
 | 49	| Aug 12 	| rpi_dht.py (+)  	|
 | 50	| Aug 13 	| rpi_dht.py (+)  	|
 | 51	| Aug 14 	| rpi_dht.py (+)  	|
-| 52	| Aug 15 	|   	|
+| 52	| Aug 15 	| LC: 807 (2)  	|
 | 53	| Aug 16 	|   	|
 | 54	| Aug 17 	|   	|
 | 55	| Aug 18 	|   	|
