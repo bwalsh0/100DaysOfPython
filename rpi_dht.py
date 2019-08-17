@@ -9,6 +9,7 @@ POLL_RATE = 30 * 60     # ROP in minutes
 LCD_DATA_PINS = [13, 6, 5, 11]
 S_PIN, SENSOR, B_PIN = 14, 22, 23   # Sensor signal, sensor data, button pin
 
+print("Initializing...")
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(B_PIN, GPIO.IN,
@@ -47,28 +48,14 @@ def idle_sensor():
 
 
 def read_sensor() -> (float, float):
-    NUM_SAMPLES = 3.0
-    tSample, hSample = [], []
-
-    # Get avg. from multiple reads
-    for sample in range(NUM_SAMPLES):
-        humidity, temp = Adafruit_DHT.read_retry(SENSOR, S_PIN)
-        temp = temp * 9/5.0 + 32
-        time.sleep(0.5)
-        if humidity is None and temp is None:
-            temp, humidity = -1, -1
-            lcd.write_string('Failed to read sensor')
-            time.sleep(2)
-            lcd.clear()
-            return temp, humidity
-        tSample.append(temp)
-        hSample.append(humidity)
-
-    temp, humidity = sum(tSample) / NUM_SAMPLES, sum(hSample) / NUM_SAMPLES
-    temp = round(temp, 2)
-    humidity = round(humidity, 2)
-
-    return temp, humidity
+    humidity, temp = Adafruit_DHT.read_retry(SENSOR, S_PIN)
+    temp = temp * 9/5.0 + 32
+    if humidity is None and temp is None:
+        temp, humidity = -1, -1
+        lcd.write_string('Failed to read sensor')
+        lcd.clear()
+        return temp, humidity
+    return round(temp, 2), round(humidity, 2)
 
 
 def trigger_sensor(counter: int):
@@ -78,9 +65,11 @@ def trigger_sensor(counter: int):
     temp, humidity = read_sensor()
     lcd.clear()
     lcd.write_string('{0}F, {1}% Hum, c{2}'.format(temp, humidity, counter))
-    time.sleep(5)
+    time.sleep(3)
     lcd.clear()
 
 
 main()
 GPIO.cleanup()
+# Overlay graph with Temp vs Time and Hum vs Time
+# And overlay with hourly local weather
