@@ -55,10 +55,10 @@
 | 50	| Aug 13 	| rpi_dht.py (+)  	|
 | 51	| Aug 14 	| rpi_dht.py (+)  	|
 | 52	| Aug 15 	| LC: 807 (2)  	|
-| 53	| Aug 16 	|   	|
-| 54	| Aug 17 	|   	|
-| 55	| Aug 18 	|   	|
-| 56	| Aug 19 	|   	|
+| 53	| Aug 16 	| rpi_dht.py (+)  	|
+| 54	| Aug 17 	| rpi_dht.py (+)  	|
+| 55	| Aug 18 	| ucr_post_rnn.py  	|
+| 56	| Aug 19 	| (Proprietary code: Data visualization, APIs, ~4 hours)  	|
 | 57	| Aug 20 	|   	|
 | 58	| Aug 21 	|   	|
 | 59	| Aug 22 	|   	|
