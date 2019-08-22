@@ -1,17 +1,48 @@
 import requests
 
+retrieved_text = set()
+files = [r'.\askreddit_content', r'.\casualconv_content']
+
 
 def main():
-    reqCount = 0
+    reqCount = 1
 
-    with open(r'.\r_post_titles.txt', 'a') as txt:
-        handle_recursive_req(None, txt, reqCount)
+    get_user_comments()
+    # handle_recursive_req(None, reqCount)
+    # with open(r'.\post_authors.txt', 'a') as txt:
+    #     for i in retrieved_text:
+    #         txt.write(i + '\n')
+    #     txt.close()
+    #     exit(0)
 
 
-def handle_recursive_req(paramId, outFile, reqCount):
-    if reqCount > 9: outFile.close(); exit(0)
+def get_user_comments():
+    for userList in files:
+        with open(userList + '_authors.txt', 'r') as txt, open(userList + '_comments.txt', 'a') as outTxt:
+            for user in txt.readlines():
+                baseUrl = 'https://www.reddit.com/user/' + user + '/comments/.json?limit=100'
+                response = requests.get(baseUrl, headers={'User-agent': 'JsonGrab'})
+                if not response.ok:
+                    print("Error", response.status_code)
+                    exit()
 
-    baseUrl = 'https://www.reddit.com/r/ucr/new.json?limit=100'
+                data = response.json()['data']
+                allPosts = data['children']
+
+                for post in allPosts:
+                    postData = post['data']
+                    try:
+                        outTxt.write(postData['body'] + '\n')
+                    except UnicodeEncodeError:
+                        print("** UEE exception caught")
+                        continue
+
+
+def handle_recursive_req(paramId, reqCount):
+    if reqCount > 1: return
+    print("Parsed page No.", reqCount, " -- Approx.", (reqCount) * 100, " total posts.")
+
+    baseUrl = 'https://www.reddit.com/r/askreddit/hot.json?limit=100'
     if paramId is not None:
         baseUrl += "&after=" + paramId
     response = requests.get(baseUrl, headers={'User-agent': 'JsonGrab'})
@@ -26,13 +57,14 @@ def handle_recursive_req(paramId, outFile, reqCount):
 
     for post in allPosts:
         postData = post['data']
-        title = postData['title'] + '\n'
-        try:
-            outFile.write(title)
-        except UnicodeEncodeError:
-            print("UEE")
-            continue
-    handle_recursive_req(recurParam, outFile, reqCount)
+        retrieved_text.add(postData['author'])
+    handle_recursive_req(recurParam, reqCount)
+
+        #     try:
+        #     outFile.write(title + '\n')
+        # except UnicodeEncodeError:
+        #     print("** UEE exception caught")
+        #     continue
 
 
 def sanitize_outfile():
