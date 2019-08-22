@@ -60,7 +60,7 @@
 | 55	| Aug 18 	| ucr_post_rnn.py (+)  	|
 | 56	| Aug 19 	| (Proprietary code: Data visualization, APIs, ~4 hours)  	|
 | 57	| Aug 20 	| (Proprietary code: Data structures, parsing ~4 hours)  	|
-| 58	| Aug 21 	|   	|
+| 58	| Aug 21 	| reddit_batch_request.py (+)  	|
 | 59	| Aug 22 	|   	|
 | 60	| Aug 23 	|   	|
 | 61	| Aug 24 	|   	|
