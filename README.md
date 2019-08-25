@@ -63,7 +63,7 @@
 | 58	| Aug 21 	| reddit_batch_request.py (+)  	|
 | *59*	| *Aug 22* 	|   	|
 | 60	| Aug 23 	| (Proprietary code: GIS APIs ~4 hours)  	|
-| 61	| Aug 24 	|   	|
+| 61	| Aug 24 	| pihue.py  	|
 | 62	| Aug 25 	|   	|
 | 63	| Aug 26 	|   	|
 | 64	| Aug 27 	|   	|
