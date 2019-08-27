@@ -65,7 +65,7 @@
 | 60	| Aug 23 	| (Proprietary code: GIS APIs ~4 hours)  	|
 | 61	| Aug 24 	| pihue.py  	|
 | 62	| Aug 25 	| rpi_local_analytics.py  	|
-| 63	| Aug 26 	|   	|
+| 63	| Aug 26 	| rpi_local_analytics.py (+)  	|
 | 64	| Aug 27 	|   	|
 | 65	| Aug 28 	|   	|
 | 66	| Aug 29 	|   	|
