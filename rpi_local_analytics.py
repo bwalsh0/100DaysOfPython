@@ -10,6 +10,7 @@ import os
 DUTY_CYCLE = [30 * 60, 5 * 60]                     # ROP in minutes
 LCD_DATA_PINS = [13, 6, 5, 11]
 S_PIN, SENSOR, B_PIN = 14, 22, 23       # Sensor signal, sensor data, button pin
+DNS_STATE = [-1] * 5
 counter = 0                             # Units: sec, Max: DUTY_CYCLE[0]
 
 print("Initializing...")
@@ -79,9 +80,12 @@ def poll_dns():
     timeNow = datetime.now(pytz.timezone('US/Pacific')).strftime("%m/%d/%Y %H:%M")
     with open(r'./private-values/dns-list.txt', 'r') as dnsList, \
         open(r'./dns_log.txt', 'a') as dnsOut:
-        for row in dnsList.readlines():
+        for index, row in enumerate(dnsList.readlines()):
             row = row.strip().split(',')
             status = str(os.system('ping -s 8 -c 2 -w 0.050 ' + row[0]))
+            if status == DNS_STATE[index]:
+                continue
+            DNS_STATE[index] = status
             output = [status, row[0], row[1], timeNow]
             for i in output:
                 dnsOut.write(i + ',')
