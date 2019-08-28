@@ -66,7 +66,7 @@
 | 61	| Aug 24 	| pihue.py  	|
 | 62	| Aug 25 	| rpi_local_analytics.py  	|
 | 63	| Aug 26 	| rpi_local_analytics.py (+)  	|
-| 64	| Aug 27 	|   	|
+| 64	| Aug 27 	| (Proprietary code: Parsing binary files, debugger tools ~4 hours)  	|
 | 65	| Aug 28 	|   	|
 | 66	| Aug 29 	|   	|
 | 67	| Aug 30 	|   	|
