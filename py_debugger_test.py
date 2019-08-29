@@ -1,7 +1,7 @@
 from os import listdir
 from os.path import isfile, join
 
-PATH = r'C:\Users\Bryan Walsh\Documents\GitHub\tensor_new'
+PATH = r'.\tensor_new'
 
 files = [file for file in listdir(PATH) if isfile(join(PATH, file))]
 
