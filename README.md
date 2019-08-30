@@ -68,7 +68,7 @@
 | 63	| Aug 26 	| rpi_local_analytics.py (+)  	|
 | 64	| Aug 27 	| (Proprietary code: Parsing binary files, debugger tools ~4 hours)  	|
 | 65	| Aug 28 	| py_debugger_test.py  	|
-| 66	| Aug 29 	|   	|
+| 66	| Aug 29 	| (Proprietary code: pandas library, data parsing, ~5 hours)  	|
 | 67	| Aug 30 	|   	|
 | 68	| Aug 31 	|   	|
 | 69	| Sep 01 	|   	|
