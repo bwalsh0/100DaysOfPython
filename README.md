@@ -69,11 +69,8 @@
 | 64	| Aug 27 	| (Proprietary code: Parsing binary files, debugger tools ~4 hours)  	|
 | 65	| Aug 28 	| py_debugger_test.py  	|
 | 66	| Aug 29 	| (Proprietary code: pandas library, data parsing, ~5 hours)  	|
-| 67	| Aug 30 	|   	|
-| 68	| Aug 31 	|   	|
-| 69	| Sep 01 	|   	|
-| 70	| Sep 02 	|   	|
-| 71	| Sep 03 	|   	|
+| *67-70*	| *Aug 30-Sep 2* 	| *Holiday*  	|
+| 71	| Sep 03 	| (Proprietary code: Automated testing, ~5 hours)  	|
 | 72	| Sep 04 	|   	|
 | 73	| Sep 05 	|   	|
 | 74	| Sep 06 	|   	|
