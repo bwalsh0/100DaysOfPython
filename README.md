@@ -71,7 +71,7 @@
 | 66	| Aug 29 	| (Proprietary code: pandas library, data parsing, ~5 hours)  	|
 | *67-70*	| *Aug 30-Sep 2* 	| *Holiday*  	|
 | 71	| Sep 03 	| (Proprietary code: Automated testing, ~5 hours)  	|
-| 72	| Sep 04 	|   	|
+| 72	| Sep 04 	| spreadsheet_helper_snippet.py  	|
 | 73	| Sep 05 	|   	|
 | 74	| Sep 06 	|   	|
 | 75	| Sep 07 	|   	|
