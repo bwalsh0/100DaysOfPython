@@ -4,10 +4,9 @@ from os import listdir
 from os.path import isfile, join
 import re
 
-PATH = r'C:\Users\Bryan Walsh\Music\Synced Music'
-
-changed = set()
-skipped = set()
+PATH = r'.\Synced Music'
+changed, skipped = set(), set()
+ctNone, ctRedundant = 0, 0
 
 def main():
     for fname in [PATH + '\\' + fname for fname in listdir(PATH)]:
@@ -18,13 +17,22 @@ def main():
                 handleMissingAlbum(mp3)
             except AttributeError:
                 continue
+    print("Fixed:\n{0} redundant\n{1} blank".format(ctNone, ctRedundant))
         
 def handleMissingAlbum(mp3):
+    global ctRedundant; global ctNone
     album = mp3.tag.album
-    if album == '':
-        print(mp3.tag.title, " -- by ", mp3.tag.artist)
-
-
+    if album is None:
+        print(mp3.tag.title, " || ", mp3.tag.artist)
+        mp3.tag.album = "Synced Music"
+        mp3.tag.save()
+        ctNone += 1
+    elif 'Single' in album:
+        print(mp3.tag.title, " || ", album, " || ", mp3.tag.artist)
+        mp3.tag.album = "Synced Music"
+        mp3.tag.save()
+        ctRedundant += 1
+        
 def handleMultiArtists(mp3):
     artist = mp3.tag.artist
     pattern = re.compile(' & |, |; ')
