@@ -19,7 +19,7 @@
 |  15 	| Jul 08 	| rpi_dht.py (+)  	|
 |  16 	| Jul 09 	| socal_earthquake_feed.py (+)  	|
 |  17 	| Jul 10 	| LC: 1108 (1)  	|
-|  18 	| Jul 11 	| mp3_tag_parse.py  	|
+|  18 	| Jul 11 	| mp3_tag_sanitizer.py  	|
 |  19 	| Jul 12 	| csv_timekeeper.py  	|
 |  20 	| Jul 13 	| LC: 344 (1)  	|
 |  21 	| Jul 14 	| LC: 412 (1)  	|
@@ -75,7 +75,7 @@
 | 73	| Sep 05 	|   	|
 | 74	| Sep 06 	|   	|
 | 75	| Sep 07 	|   	|
-| 76	| Sep 08 	|   	|
+| 76	| Sep 08 	| mp3_tag_sanitizer.py (+)  	|
 | 77	| Sep 09 	|   	|
 | 78	| Sep 10 	|   	|
 | 79	| Sep 11 	|   	|
