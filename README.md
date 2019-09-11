@@ -77,7 +77,7 @@
 | 75	| Sep 07 	|   	|
 | 76	| Sep 08 	| mp3_tag_sanitizer.py (+)  	|
 | 77	| Sep 09 	| mp3_tag_sanitizer.py (+)  	|
-| 78	| Sep 10 	|   	|
+| 78	| Sep 10 	| artget.py  	|
 | 79	| Sep 11 	|   	|
 | 80	| Sep 12 	|   	|
 | 81	| Sep 13 	|   	|
