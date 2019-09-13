@@ -7,27 +7,21 @@ from RPLCD import CharLCD
 import csv
 import os
 
-DUTY_CYCLE = [30 * 60, 5 * 60]                     # ROP in minutes
+DUTY_CYCLE = [30 * 60, 10 * 60]                     # ROP in minutes, [task1, task2]
 LCD_DATA_PINS = [13, 6, 5, 11]
 S_PIN, SENSOR, B_PIN = 14, 22, 23       # Sensor signal, sensor data, button pin
-DNS_STATE = [-1] * 5
+DNS_KEYS, DNS_STATE = None, None
 counter = 0                             # Units: sec, Max: DUTY_CYCLE[0]
 
-print("Initializing...")
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(B_PIN, GPIO.IN,
-           pull_up_down=GPIO.PUD_DOWN)
-lcd = CharLCD(pin_rs=26, pin_e=19, pins_data=LCD_DATA_PINS,
-              numbering_mode=GPIO.BCM, dotsize=8,
-              auto_linebreaks=True,
-              cols=16, rows=2)
-lcd.clear()
-
-
 def main():
-    print(">> Logging")
+    global DNS_KEYS
+    global DNS_STATE
+    with open(r'./private-values/dns-list.txt', 'r') as dnsList:
+        DNS_KEYS = [tuple(row.rstrip().split(',')) for row in dnsList.readlines()]
+        DNS_STATE = [-1] * len(DNS_KEYS)
+
     while True:
+        print(">> Logging")
         poll_sensor()
         poll_dns()
         hold(counter)              # Hold for 30 min, listen for button down
@@ -43,13 +37,14 @@ def poll_sensor():
         log.close()
 
 
-def hold(counter: int):
+def hold(counter: int): 
     while counter <= DUTY_CYCLE[0]:
         if GPIO.input(B_PIN) == GPIO.HIGH:
             trigger_sensor(counter)
             counter += 3
         if counter % DUTY_CYCLE[1] == 0:
             poll_dns()
+            counter += len(DNS_KEYS)
         counter += 1
         time.sleep(1)
 
@@ -78,19 +73,31 @@ def trigger_sensor(counter: int):
 
 def poll_dns():
     timeNow = datetime.now(pytz.timezone('US/Pacific')).strftime("%m/%d/%Y %H:%M")
-    with open(r'./private-values/dns-list.txt', 'r') as dnsList, \
-        open(r'./dns_log.txt', 'a') as dnsOut:
-        for index, row in enumerate(dnsList.readlines()):
-            row = row.strip().split(',')
-            status = str(os.system('ping -s 8 -c 2 -w 0.050 ' + row[0]))
+    with open(r'./dns_log.txt', 'a') as dnsOut:
+        for index, dns in enumerate(DNS_KEYS):
+            status = str(os.system('ping -s 8 -c 8 ' + dns[0]))
             if status == DNS_STATE[index]:
                 continue
             DNS_STATE[index] = status
-            output = [status, row[0], row[1], timeNow]
-            for i in output:
-                dnsOut.write(i + ',')
-            dnsOut.write('\n')
+            if status == '0':
+                status = 'ON'
+            elif status == '256':
+                status = 'OFF'
+            output = [status] + list(dns) + [timeNow] + ['\n']
+            dnsOut.write(','.join(output))
 
+
+print("Initializing GPIO...")
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(B_PIN, GPIO.IN,
+        pull_up_down=GPIO.PUD_DOWN)
+lcd = CharLCD(pin_rs=26, pin_e=19, pins_data=LCD_DATA_PINS,
+            numbering_mode=GPIO.BCM, dotsize=8,
+            auto_linebreaks=True,
+            cols=16, rows=2)
+lcd.clear()
+print("GPIO ready, beginning initial poll")
 
 main()
 GPIO.cleanup()
