@@ -79,7 +79,7 @@
 | 77	| Sep 09 	| mp3_tag_sanitizer.py (+)  	|
 | 78	| Sep 10 	| artget.py  	|
 | 79	| Sep 11 	| (Proprietary code: Data validation, ~2 hours)  	|
-| 80	| Sep 12 	|   	|
+| 80	| Sep 12 	| rpi_local_analytics.py (+)  	|
 | 81	| Sep 13 	|   	|
 | 82	| Sep 14 	|   	|
 | 83	| Sep 15 	|   	|
